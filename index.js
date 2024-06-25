@@ -68,6 +68,6 @@ console.log(i);
 console.log(typeof i);
 
 // Symbol
-const s= Symbol("Rainbow is my good boy");
+const s= Symbol("Rainbow s my good boy");
 console.log(s);
 console.log(typeof s);
