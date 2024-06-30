@@ -53,21 +53,237 @@
 // // const wont define undefined 
 
 // null
-let f = null;
-console.log(f);
-console.log(typeof f);
+// let f = null;
+// console.log(f);
+// console.log(typeof f);
 
-// Boolean
-const isTrue = true;
-console.log(isTrue);
-console.log(typeof isTrue);
+// // Boolean
+// const isTrue = true;
+// console.log(isTrue);
+// console.log(typeof isTrue);
 
-// BigInt
-const i = true;
-console.log(i);
-console.log(typeof i);
+// // BigInt
+// const i = true;
+// console.log(i);
+// console.log(typeof i);
 
-// Symbol
-const s= Symbol("Rainbow s my good boy");
-console.log(s);
-console.log(typeof s);
+// // Symbol
+// const s= Symbol("Rainbow s my good boy");
+// console.log(s);
+// console.log(typeof s);
+
+
+
+// let x= 2.33;
+// console.log(x);
+// console.log(typeof x);
+
+
+// // type Conversion very important
+// // this is string coz we have put number inside ""
+// // const result = "123";
+// // const output = Number(result);
+
+// // const result = "1.23";
+// // console.log(result);
+// // const output = psrseInt( output);
+// // console.log(typeof result);
+
+// // const result = 1.23;
+// // const output = String(result);
+// // console.log(output);
+// // console.log(typeof result);
+
+// // or converting no into string
+// const result = 23;
+// const output = result.toString();
+// console.log(output);
+// console.log(typeof output);
+
+
+// // const isMarried = false;
+// // const ans=String(isMarried);
+// // console.log(ans);
+// // console.log(typeof ans);
+
+
+// // Array
+// const arr=[1,2,3,4,5];
+// console.log(arr);
+// console.log(typeof arr);
+
+// // Function
+// function add(num1,num2){
+//     return num1+num2;
+// }
+// console.log(add(1,2));
+// console.log(typeof add);
+
+// // Date
+//  const today = new Date();
+//  console.log(today);
+//  console.log(typeof today);
+ 
+//  // Error
+//  const error = new Error();
+//  console.log(error);
+//  console.log(typeof error);
+ 
+//  // RegExp
+//  const reg = new RegExp();
+//  console.log(reg);
+//  console.log(typeof reg);
+ 
+//  // Map
+//  const map = new Map();
+//  console.log(map);
+//  console.log(typeof map);
+
+
+//  // Object. TYPEs
+//  const obj={
+//      name: "Rainbow",
+//      age: 23,
+//      isMarried: false,
+//      occupation: "Security",
+//  };
+//   console.log(obj);
+//   console.log(typeof obj);
+
+// // to ch3ck typew of array
+// const array =["1", "2", "3", "4"];
+//     console.log(arr);
+//     console.log(typeof arr);
+
+    // date ko obj type obj 
+    // const data =new Date();
+    //     console.log(date);
+    //     console.log(typeof date);
+
+// 1+"1"=11 in js coz last ko 1 string xa
+// const result= 1+"1";
+// console.log(result);
+// console.log(typeof result);
+// // output will be 11 coz + lai add gardaina combine gardinxa
+
+
+// const result= 8-"4";
+// console.log(result);
+// console.log(typeof result);
+// esma chai minus nai gardinxa 
+
+
+// // to remove unwanted space while loging email
+// // String method
+// const result= "RAinbow is specialoo";
+
+// // length
+// console.log(result.length);
+
+// // CharAt
+// console.log(result.charAt(2));
+
+
+// // indexOf
+// console.log(result.indexOf("o"));
+
+// // LastindexOf
+// console.log(result.indexOf("o"));
+
+// // LowerCase
+// console.log(result.toLowerCase());
+// // UpperCase
+// console.log(result.toUpperCase());
+// // Replace
+// console.log(result.replace("RAinbow", "Rainbow"));
+
+// // Includes/
+// console.log(result.includes("specialoo"));
+// console.log(result.includes("specioo"));
+// // to see if the words are true of false
+
+// // slice`
+// console.log(result.slice(2 , 4));
+// // to see letter 
+
+// // concat
+// console.log(result.concat("Hello Ruby!"));
+
+// let output="            Hello Team";
+// console.log(output.trim());
+
+// //split the words
+// console.log(result.split(" "));
+
+
+// // more about concat // concatination
+// let x="Hello";
+// let y="Rainbwfbaejl";
+// let z="Raaejl";
+// // x and y merge hunxa together
+// console.log(x + y);
+// console.log(x + " " + y + z);
+// console.log(x + " " + y + " " + z);
+// // to give the space between x and y
+
+
+// // // to give the space between x and y
+// const a= 23;
+// const b= 33;
+// const result = a+b;
+// console.log("The sun is shinning:" + result);
+// console.log(`The sun is shinning: ${result}`);
+
+//Assignment operator
+// let x=57;
+// x=x+10;
+// console.log(x)
+
+// let y=57;
+// // y=y+60;
+// y+=60;
+// console.log(y)
+
+// comparison operator == and ===[very very important]
+// let a = 57;
+// let b = 56;
+// let c = 56;
+// console.log(a == c);
+// console.log(a === c);
+// console.log(a != b);
+// console.log(a != c);
+// console.log(a > b);
+// console.log(a < b);
+// console.log(a <= b);
+
+// Logical operator{ very vey very important}
+// Conditional operator{ very vey very important}
+
+
+// conditional ternary operator
+// let ageGroup = 46;
+// console.log(ageGroup <= 34 ? "You can vote" : "You can't vote");
+
+
+// unary operator
+let a = "57";
+let b = +a            //positive
+console.log(a);
+console.log(typeof a );
+
+let c = 7;
+let d = +c           //positive
+console.log(c);
+console.log(typeof c );
+
+
+const obj = {
+    name: "Rainbow",
+    age: 23,
+};
+
+delete Object.age;
+console.log(obj)
+
+
+
