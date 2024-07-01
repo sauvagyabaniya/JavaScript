@@ -398,46 +398,128 @@
 //         break;
 // }
 
-// git status``
-// git branch``
+// git status
+// git branch
 // git branch branchname
-// git checkout branch
-// git branch``
+// git checkout branchname
+// git branch
+// now add
+// git add .
+// git commit -m "abc"
+// git push origin abc"
+
+
+
+
 //----------------------------------------------very very imp------------------------------------------------
 // status
-let status= 200;
+// let status= 200;
 
-switch (status) {
-    case 201:
-        console.log("Created");
-        break;
+// switch (status) {
+//     case 201:
+//         console.log("Created");
+//         break;
 
-    case 400:
-        console.log("Bad Request");
-        break;
+//     case 400:
+//         console.log("Bad Request");
+//         break;
 
-    case 401:
-        console.log("Unauthorized");
-        break;
+//     case 401:
+//         console.log("Unauthorized");
+//         break;
 
-    case 403:
-        console.log("Forbidden");
-        break;
+//     case 403:
+//         console.log("Forbidden");
+//         break;
 
-    case 500:
-        console.log("Internal Server Error");
-        break;
+//     case 500:
+//         console.log("Internal Server Error");
+//         break;
 
-    case 200:
-        console.log("OK");
-        break;
+//     case 200:
+//         console.log("OK");
+//         break;
 
-    default:
-        console.log("Invalid Server Error");
-        break;
-}
+//     default:
+//         console.log("Invalid Server Error");
+//         break;
+// }
+
+// ---------------------------imp-------------------------
+//loop
+//  for loop
+
+// for(let i = 0; i <=10; i++) {   //declared variable how many times we can use
+//     console.log("Rainbow is my favorite " + i);
+// }
+// or
+// for(let i = 0; i <=10; i++) {   //declared variable how many times we can use
+//     console.log(i);
+// }
+
+// writing multiplication table of 2
+
+// for(let i = 0; i <=10; i++) {   //declared variable how many times we can use
+//     console.log(`2*${i}=${2 * i}`);
+// }
 
 
+// for(let i = 0; i <=20; i++) {
+//     if(i % 2 === 0){
+//         // console.log(i);
+//         console.log(`The even Number are: ${i}`);
+// // to print inside this loop to check odd even at same time
+//     // }
+//     // else{ 
+//     //     console.log(`The odd Number are: ${i}`);
+//     // }
+// }
 
 
+// //to check odd number xuttai
+// for(let i = 0; i <=20; i++) {
+//     if(i % 2 !== 0){
+//         // console.log(i);
+//         console.log(`The Odd Number are: ${i}`);
 
+//     }
+// }
+
+// //to add these given numbers 3,4,5,6
+// const arr = [3,4,5,6    ];
+// let sum=0;
+// for (let i = 0; i < arr.length; i++) {  //arr.length this will check the length of the array my is 3 (0,1,2,3)->(3,4,5,6)
+//     sum += arr[i];
+// }
+
+// console.log(sum);
+
+//while loop
+// while loop ma pailai let initialize gana parxa but let ma let ko inside initialize garna parxa
+// let i=0;
+// while (i < 10) {
+//     console.log(i);
+//     i++;
+// }
+
+// //do while loop
+// let sum=0;
+// do {
+//     console.log("sum");
+//     i++;
+
+// }while(i <= 10);
+// or
+//do while loop
+// let i =0;
+// do {
+//     console.log("sum"+i);
+//     i++;
+
+// }while(i <= 10);
+
+
+const arr=[4,5,6,7];
+console.log(arr);
+console.log(arr[2]);
+console.log(typeof arr);
