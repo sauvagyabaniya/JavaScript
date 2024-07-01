@@ -265,25 +265,179 @@
 // console.log(ageGroup <= 34 ? "You can vote" : "You can't vote");
 
 
-// unary operator
-let a = "57";
-let b = +a            //positive
-console.log(a);
-console.log(typeof a );
+// // unary operator
+// let a = "57";
+// let b = +a            //positive
+// console.log(a);
+// console.log(typeof a );
 
-let c = 7;
-let d = +c           //positive
-console.log(c);
-console.log(typeof c );
+// let c = 7;
+// let d = +c           //positive
+// console.log(c);
+// console.log(typeof c );
 
 
-const obj = {
-    name: "Rainbow",
-    age: 23,
-};
+// const obj = {
+//     name: "Rainbow",
+//     age: 23,
+// };
 
-delete Object.age;
-console.log(obj)
+// delete Object.age;
+// console.log(obj)
+
+
+// let email = "sauvagyabaniya@gmail.com"
+// let password="999999"
+// // pair of {} is known as block
+// if (email === "sauvagyabaniya@gmail.com" && password === "999999"){
+//     console.log("Login successful!");
+// }else{
+//     console.log("Login unsuccessful!!");
+// }
+
+// // Checking SEE result
+// let grade= 50;
+// if (grade >= 90){
+//     console.log("Grade : A+");
+// }
+// else if (grade >=80){
+//     console.log("Grade : A");
+// }else if (grade >= 70){
+//     console.log("Grade : B+");
+// }
+// else if (grade >= 60){
+//         console.log("Grade : B");
+// }else if (grade >= 50){
+//     console.log("Grade : C");
+// }else if (grade >= 40){
+//     console.log("Grade : D");
+
+// }else{
+//     console.log("Grade : Failed");
+// }
+
+
+
+
+// // weather
+// let weather = "rainy";
+// if (weather === "sunny"){
+//     console.log("Wear sunglasses Today is Sunny!!");
+// }else if (weather === "winter"){
+//     console.log("Wear warm clothes Today is Winter!!");
+// }else if( weather === "clouds"){
+//     console.log("Wear raincoat Today is Clouds!!!!");
+// }else if( weather === "rainy"){
+//     console.log("Take umbrella Today is Rainy!!!");
+// }else{
+//     console.log("Invalid weather!!!");
+// }
+
+
+
+// organizing code not repeating  by using switch control statements (To make code short and fast)
+// //      switch
+// let role = "super admin";
+// switch (role) {     //key ko thau ma role halne ho value assign gana
+//     case "buyer":
+//             console.log(" YOu can only buy products!!");   
+//         break;
+
+//     case "seller":
+//             console.log(" YOu can sell your products!!");
+//         break;
+
+//     case "admin":
+//             console.log(" YOu can add your products!!");
+//             break;
+
+//     case "super admin":
+//             console.log(" YOu can access everything!!");
+//         break;
+
+//     default:
+//         break;
+// }
+
+
+// // to check whoch day is today
+// let date = new Date().getDate();
+// console.log(date);      //to check date
+
+
+// switch (date) {     //key ko thau ma true halne ho value assign gana
+//     case 0:
+//             console.log(" TOday is Sunday!");   
+//         break;
+
+//     case 1:
+//             console.log(" TOday is Monday !");
+//         break;
+
+//     case 2:
+//             console.log(" TOday is Tuesday !");
+//             break;
+
+//     case 3:
+//             console.log(" TOday is Wednesday !");
+//         break;
+
+//     case 4:
+//             console.log(" TOday is Thursday!! ");
+//         break;
+
+//     case 5:
+//             console.log(" TOday is Friday!");
+//         break;
+
+//     case 6:
+//             console.log(" TOday is Saturday!");
+//         break;
+
+//     default:
+//         break;
+// }
+
+// git status``
+// git branch``
+// git branch branchname
+// git checkout branch
+// git branch``
+//----------------------------------------------very very imp------------------------------------------------
+// status
+let status= 200;
+
+switch (status) {
+    case 201:
+        console.log("Created");
+        break;
+
+    case 400:
+        console.log("Bad Request");
+        break;
+
+    case 401:
+        console.log("Unauthorized");
+        break;
+
+    case 403:
+        console.log("Forbidden");
+        break;
+
+    case 500:
+        console.log("Internal Server Error");
+        break;
+
+    case 200:
+        console.log("OK");
+        break;
+
+    default:
+        console.log("Invalid Server Error");
+        break;
+}
+
+
 
 
 
