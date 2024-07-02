@@ -619,3 +619,43 @@
 // person.gree();
 //alt shift  p to start prettier
 
+// ----------------------------FUNCTION------------------------------------
+//function is reusable code
+// way of wrtiing fn
+// function fnname() {
+//     console.log("Hello World");
+// }
+// fnname();
+
+
+// function fnname(a,b,C) {
+//     return a+b; 
+// }
+
+// let ans = fnname(8,9);
+// console.log("the sum of the" + ans);
+
+
+// function myfn(radius){
+//     return Math.PI * radius *radius;
+// }
+// let ans = myfn(7);
+// console.log("the sum of the" + ans);
+
+
+// calculator
+function calculate(cartItems, taxRate){
+    let total = 0;
+    for (let i = 0; i <cartItems.length; i++) {
+        total += cartItem[i].price * cartItems[i].quantity;
+    }
+    total +=total * taxRate;
+    return total;
+}
+
+let cart=[
+    {name: "Rainbow", price: 777, quantity: 4},
+    {name: "hfsdhf", price:777, quantity:9}
+];
+const result = calculateTotal(cart, 0.02);
+console.log(result);
