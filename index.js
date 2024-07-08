@@ -785,3 +785,6 @@ function deleteTask(){
 
     y.onclick=addTask;
     o.onclick=deleteTask;
+    //  git checkout master
+    // git merge day3
+    // git push origin master
