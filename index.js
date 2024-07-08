@@ -643,19 +643,145 @@
 // console.log("the sum of the" + ans);
 
 
-// calculator
-function calculate(cartItems, taxRate){
-    let total = 0;
-    for (let i = 0; i <cartItems.length; i++) {
-        total += cartItem[i].price * cartItems[i].quantity;
-    }
-    total +=total * taxRate;
-    return total;
+// // calculator
+// function calculate(cartItems, taxRate){
+//     let total = 0;
+//     for (let i = 0; i <cartItems.length; i++) {
+//         total += cartItem[i].price * cartItems[i].quantity;
+//     }
+//     total +=total * taxRate;
+//     return total;
+// }
+// let cart=[
+//     {name: "Rainbow", price: 777, quantity: 4},
+//     {name: "hfsdhf", price:777, quantity:9}
+// ];
+// const result = calculateTotal(cart, 0.02);
+// console.log(result);
+
+// function myFunc(){
+//     let a = prompt("Enter first number");
+//     let b = prompt("Enter second number");
+//     let result = Number(a) + Number(b);
+//     if (result){
+//         alert("The sum of two number is :",$result);
+//     }
+// }
+// myFunc();
+
+
+// ----------------------------scoping :-------------------------------
+// global scope->declare variables globally 
+//  function scope 
+// and block scope block scope is very very important
+
+// var x= 90;
+// var y= 40;
+// const z= 70;
+// function myFunc(){
+//     console.log(x, y, z);
+// }
+// myFunc();
+
+// function scope ->declared inside function
+// function myFunc(){
+// var x= 90;
+// var y= 40;
+// const z= 70;
+//     console.log(x, y, z);
+// }
+// myFunc();
+
+
+// function myFunc(){
+//     if(true){
+//         var x= 90;
+//         let y= 40;
+//         const z= 70;
+//         console.log(y);  //cannot print outside function is known as function scope(let and const use vko vayara inside function ma hunxa)
+//         console.log(z);
+//     }
+//     console.log(x); //can print outside function is known as block scope(var use vako xa )
+// }
+// myFunc();
+
+
+// DOM (DOCUMENT OBJECT MODEL)
+// in short dom is browser display page styling html 
+//         document-> obj which help to access body contents
+// console.log(document.body); //console ma body element access garna milxa
+// let result=document.getElementById("hello");
+// console.log(result); 
+// change garne 
+// let result=document.getElementById("hello");
+// result.innerHTML="I have Rainbow";
+// result.style.backgroundColor="skyblue"; //to add background color
+// result.style.color="white";
+// result.style.textAlign="center";
+// new
+
+
+// let result=document.getElementById("hello");
+// result.innerHTML="I have Rainbow";
+// result.style.backgroundColor="skyblue"; //to add background color
+// result.style.color="white";
+// result.style.textAlign="center";
+// let output = document.getElementsByClassName("helo")[0]; //to access firrst index
+// console.log(output);
+// output.innerHTML="MY laptop";
+// output.style.backgroundColor="peru"; //to add background color
+// output.style.color="smoke";
+// output.style.textAlign="center";
+
+// let ans = document.getElementsByClassName("helo");
+// ans[1].innerHTML="MY screen";
+// ans[1].style.backgroundColor="pink";
+// ans[1].style.color="white";
+// ans[1].style.textAlign="center";
+
+// let show = document.getElementsByTagName("span");
+// console.log(show[0]); //
+// show[0].style.backgroundColor="pink";
+// show[0].style.color="white";
+// show[0].style.textAlign="center";
+
+// let shows = document.getElementsByTagName("span");
+// console.log(shows[1]); //
+// shows[1].style.backgroundColor="yellow";
+// // shows[1].style.color="green";
+// // shows[1].style.textAlign="center";
+
+// // let z=document.getElementsByName("password");
+// // console.log(z); 
+
+let y = document.querySelector("#btnAdd");
+y.style.backgroundColor="black";
+// alert();
+y.style.color="green";
+y.style.textAlign="center";
+y.style.padding="2vmax 4vmax";
+y.style.border="none";
+y.style.cursor="pointer";
+
+let o = document.querySelector(".btndelete");
+o.style.backgroundColor="blue";
+o.style.color="black";
+o.style.textAlign="center";
+o.style.padding="2vmax 4vmax";
+o.style.cursor="pointer";
+o.style.border="none";
+
+function addTask(){
+let display = document.createElement("h1");
+display.innerText = "this is a test";
+document.body.prepend(display);
+}
+y.onclick =addTask;
+
+function deleteTask(){
+    let h1 = document.querySelector("h1");
+    h1.remove();
 }
 
-let cart=[
-    {name: "Rainbow", price: 777, quantity: 4},
-    {name: "hfsdhf", price:777, quantity:9}
-];
-const result = calculateTotal(cart, 0.02);
-console.log(result);
+    y.onclick=addTask;
+    o.onclick=deleteTask;
