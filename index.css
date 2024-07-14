@@ -5,3 +5,16 @@
     text-align: center;
     
 }
+
+.classBox{
+    width: 50%;
+    height: 200px;
+    border: 1px solid black;
+    margin: 10px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(87, 174, 227);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}

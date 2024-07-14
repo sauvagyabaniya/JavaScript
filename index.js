@@ -374,6 +374,8 @@
 //         break;
 // }
 
+// -------------------------------git---------------------------------
+
 // git status
 // git branch
 // git branch branchname
@@ -383,6 +385,10 @@
 // git add .
 // git commit -m "abc"
 // git push origin abc"
+    //  git checkout master
+    // git merge day3
+    // git push origin master
+
 
 //----------------------------------------------very very imp------------------------------------------------
 // status
@@ -457,7 +463,7 @@
 // }
 
 // //to add these given numbers 3,4,5,6
-// const arr = [3,4,5,6    ];
+// const arr = [3,4,5,6];
 // let sum=0;
 // for (let i = 0; i < arr.length; i++) {  //arr.length this will check the length of the array my is 3 (0,1,2,3)->(3,4,5,6)
 //     sum += arr[i];
@@ -754,37 +760,139 @@
 // // let z=document.getElementsByName("password");
 // // console.log(z); 
 
-let y = document.querySelector("#btnAdd");
-y.style.backgroundColor="black";
-// alert();
-y.style.color="green";
-y.style.textAlign="center";
-y.style.padding="2vmax 4vmax";
-y.style.border="none";
-y.style.cursor="pointer";
+// let y = document.querySelector("#btnAdd");
+// y.style.backgroundColor="black";
+// // alert();
+// y.style.color="green";
+// y.style.textAlign="center";
+// y.style.padding="2vmax 4vmax";
+// y.style.border="none";
+// y.style.cursor="pointer";
 
-let o = document.querySelector(".btndelete");
-o.style.backgroundColor="blue";
-o.style.color="black";
-o.style.textAlign="center";
-o.style.padding="2vmax 4vmax";
-o.style.cursor="pointer";
-o.style.border="none";
+// let o = document.querySelector(".btndelete");
+// o.style.backgroundColor="blue";
+// o.style.color="black";
+// o.style.textAlign="center";
+// o.style.padding="2vmax 4vmax";
+// o.style.cursor="pointer";
+// o.style.border="none";
 
-function addTask(){
-let display = document.createElement("h1");
-display.innerText = "this is a test";
-document.body.prepend(display);
-}
-y.onclick =addTask;
+// function addTask(){
+// let display = document.createElement("h1");
+// display.innerText = "this is a test";
+// document.body.prepend(display);
+// }
+// y.onclick =addTask;
 
-function deleteTask(){
-    let h1 = document.querySelector("h1");
-    h1.remove();
-}
+// function deleteTask(){
+//     let h1 = document.querySelector("h1");
+//     h1.remove();
+// }
 
-    y.onclick=addTask;
-    o.onclick=deleteTask;
-    //  git checkout master
-    // git merge day3
-    // git push origin master
+//     y.onclick=addTask;
+//     o.onclick=deleteTask;
+
+// // ---------------------hover garda ra click garda diff aauxa-------------------------------------------
+// let heading = document.getElementById("heading");
+// let box = document.getElementById("box");
+// let btnClick = document.getElementById("btnClick");
+// let input = document.querySelector("input");
+
+// btnClick.style.color = "green";
+// btnClick.style.backgroundColor = "black";
+// btnClick.style.cursor = "pointer";
+// btnClick.style.border = "none"; 
+
+// btnClick.addEventListener("click",()=>{
+//     console.log("Button is clicked");
+//     // box.style.backgroundColor="red";        //this will change after clicking on click me without linking on css 
+//     // box.style.border = "none";
+//     // box.style.color = "blue";
+//     // box.style.margin = "10px";
+//     // box.style.fontSize = "20px";
+//     box.classList.add("classBox");           //this is used to link css style 
+
+// });
+// btnClick.addEventListener("contextmenu",()=>{
+//     e.preventDefault();                         //form ko data loss huna didaina until you form is submitted
+//     btnClick.style.backgroundColor="black";
+// });
+// // ---------------------This will click option when u right click where you cant inspect---------------------------
+// // window.addEventListener("contextmenu",(e)=>{
+// //     e.preventDefault(); //form ko data loss huna didaina until you form
+// // });
+// btnClick.addEventListener("dblclick",()=>{
+//     document.body.style.backgroundColor = "red";
+// });
+// btnClick.addEventListener("click",()=>{
+//     document.body.style.backgroundColor = "";
+// });
+// addEventListener("click",(e)=>{
+//     console.log(e.clientX);
+//     console.log(e.clientY);
+// });
+
+// box.addEventListener("mouseover",()=>{
+//     btnClick.style.transform = "scale(1.1)";
+//     heading.innerText="Do your own business!";
+//     box.style.backgroundColor="yellow";
+//     box.style.border = "2px solid black";
+//     box.style.color = "red";
+//     box.style.margin = "20px";
+//     box.style.fontSize = "25px";
+// });
+// box.addEventListener("mouseout",()=>{           //while pointing on the cursor,it will do animation
+//     btnClick.style.transform = "";
+//     heading.innerText="Welcome!";
+//     heading.style.backgroundColor="";
+//     heading.style.border = "";
+// });
+// input.addEventListener("change",()=>{
+//     console.log("e.target.value");
+//     console.log("changing");                            //box ma j lekhda ne change print hunxa
+// });
+
+// // ---------------------------Math Object-------------------------------------
+// let num=4.5;
+// let ans=Math.round(num);
+// console.log(ans);
+
+// let output = Math.random();
+// console.log(output);
+
+// let ans= 9;
+// // let result = Math.sqrt(ans);
+// let result = Math.floor(ans);
+// console.log(result);
+// let ans= 4.3;
+// // let result = Math.sqrt(ans);
+// let result = Math.ceil(ans);
+// console.log(result);
+
+// let base=2;
+// let extonent= 3;
+// // let output = Math.pow(base,extonent);
+// console.log(output);
+
+// function Subtract(a,b) {
+//     return a - b;
+//     return Math.abs(result)
+// }
+// let output= Subtract(5,6)
+// console.log(output);
+
+// function GeneratorOTP(){
+//     let otp = Math.floor(10000 + Math.random()*900000);
+//     return otp;
+// }
+// let ans=GeneratorOTP();
+// console.log(ans);
+// let num= Math.max(1,2,34,4,5,6)
+// console.log(num);
+// let result= Math.min(1,6,4,2);
+// console.log(result);
+// ---------------------to see present date and time-------------------------------------------
+// let now = new Date().getFullYear();
+// console.log(now);
+let now = new Date().getMonth();
+console.log(now);
