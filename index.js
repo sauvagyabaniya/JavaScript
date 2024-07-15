@@ -922,6 +922,11 @@ if(localStorage.getItem("key1")){
     // alert(localStorage.getItem,"key1 is present");
 }
 
+// to check git branch 
+// git branch
+// to create new branch
+// git branch branch_name
+
 
 
 
