@@ -896,3 +896,40 @@
 // console.log(now);
 let now = new Date().getMonth();
 console.log(now);
+
+
+// ---------------------------GETITEM AND SETITEM-------------------------------------
+// local and server storge very important
+let input = document.getElementById("myInput");
+let btnAdd =document.getElementById("btnAdd");
+let btnRemove =document.getElementById("btnRemove");
+const myFunc =() => {
+    localStorage.setItem("key1", input.value);  //single string
+    // localStorage.setItem("key1", JSON.stringify(name:"SARBANI", age: 14 ));  
+    // setItem to store value 
+    alert(input.value);
+};
+btnAdd.addEventListener("click",myFunc);
+//wont exist in next tab it will show null coz of sessionStorage
+alert(localStorage.getItem("key1"));
+btnAdd.addEventListener("click",myFunc);
+btnRemove.addEventListener("click",() =>{
+    localStorage.removeItem("key1");  ////it will remove key 1
+    // sessionStorage.clear();     //it will remove all     
+});
+if(localStorage.getItem("key1")){
+    console.log(JSON.parse(localStorage.getItem("key1"))); 
+    // alert(localStorage.getItem,"key1 is present");
+}
+
+
+
+
+
+
+
+
+
+
+
+
