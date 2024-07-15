@@ -3,7 +3,12 @@ let description = document.getElementById("description");
 let form = document.querySelector("form");
 let container = document.querySelector(".container");
 
-const tasks = [];
+   
+const tasks =  localStorage.getItem("task")
+    ? JSON.parse(localStorage.getItem("task"))
+    : [];
+    showALLTasks();
+
 function showALLTasks() {
     tasks.forEach((value,index) => {
         let div = document.createElement("div")
@@ -21,6 +26,15 @@ function showALLTasks() {
         btn.setAttribute("class", "deleteBtn");
                 btn.innerText = "-";
 
+                //to remove the written words
+                btn.addEventListener("click", () => {
+                    removeTasks();  
+                    tasks.splice(index, 1);
+    localStorage.setItem("task",JSON.stringify(tasks))
+
+                    showALLTasks();
+                });
+
                 div.append(btn);
                 container.append(div);
     })
@@ -33,11 +47,13 @@ function removeTasks() {
 }
 form.addEventListener("submit",(e) => {
     e.preventDefault();             // prevent data loss
+    removeTasks();
     tasks.push({
         //this title.value help to write the words in console
         title: title.value,
         description: description.value,
     });
+    localStorage.setItem("task",JSON.stringify(tasks))
     showALLTasks();
-    console.log(tasks);
+    // console.log(tasks);
 });
