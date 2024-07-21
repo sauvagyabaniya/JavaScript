@@ -965,22 +965,68 @@
 // console.log(person1, person2, person3);
 
 
-// OOP(JS):      very very important in interview
-function person(name, age, address){        //constructor function
-    this.name = name;
-    this.age = age;
-    this.address = address;
-    this.greeting= function(){ 
-        let greet= `Hello my name is ${this.name}. I am ${this.age} yo old. My address is ${this.address}`; //it contain white space
-        return greet;
-    }
-} const person1 = new person("Rainbow", 3, "Satungal");  //variable
- const person2 = new person("Sky", 2, "Kalimati");  //variable
- const person3 = new person("Kittu", 5, "Kalanki");  //variable
-console.log(person1, person2, person3);
-console.log(person1.greeting());
+// // OOP(JS):      very very important in interview
+// function person(name, age, address){        //constructor function
+//     this.name = name;
+//     this.age = age;
+//     this.address = address;
+//     this.greeting= function(){ 
+//         let greet= `Hello my name is ${this.name}. I am ${this.age} yo old. My address is ${this.address}`; //it contain white space
+//         return greet;
+//     }
+// } const person1 = new person("Rainbow", 3, "Satungal");  //variable
+//  const person2 = new person("Sky", 2, "Kalimati");  //variable
+//  const person3 = new person("Kittu", 5, "Kalanki");  //variable
+// console.log(person1, person2, person3);
+// console.log(person1.greeting());
+
+//creating bank account of customer deposit and withdraw
+// function BankAccount(customerName, balance=0){          //default 0
+//     this.customerName = customerName;
+//     this.balance = balance;
+//     this.accountNumber = Date.now();
+//     this.deposit = function(amount){
+//         this.balance +=amount;
+// }
+// this.withdraw = function(amount){
+//     this.balance -= amount;
+// };
+// }
+// const RainbowAccount = new BankAccount("Rainbow", 20000000000)
+// const SkyAccount = new BankAccount("Sky", 5000000000)
+
+// RainbowAccount.deposit(5000);
+// SkyAccount.withdraw(1000);
+
+//     console.log(RainbowAccount, SkyAccount);
 
 
+//linking form html
+function BankAccount(customerName, balance=0){          //default 0
+    this.customerName = customerName;
+    this.balance = balance;
+    this.accountNumber = Date.now();
+    this.deposit = function(amount){
+        this.balance +=amount;
+}
+this.withdraw = function(amount){
+    this.balance -= amount;
+};
+}
+const addForm = document.querySelector("#customer")
+const customerName = document.getElementById("customerName");
+const balance = document.querySelector("#balance");
+console.log(customerName);
+console.log(balance);
+// let accounts= [];
+// addForm.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     let account = new BankAccount(customerName.value, +balance.value)
+//     accounts.push(account);
+
+// console.log(accounts);
+
+// })
 
 
 
