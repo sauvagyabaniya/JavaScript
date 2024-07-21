@@ -942,19 +942,43 @@
 //    clearInterval(Intervalid);
 //     }, 5000);            // 5 seconds interval
 
-//clock
-function UpdateClock(){
-    const clock = document.querySelector(".clock");
-    const now = new Date()
-    const hours= now.getHours().toString().padStart(2,"0");
-    // const hours= now.getHours().toString().padStart(2,"2"); to make two digit 1 lai 13
-    const minutes= now.getMinutes().toString().padStart(2,"0");
-    const seconds = now.getSeconds().toString().padStart(2,"0");
-    clock.innerHTML = `${hours} : ${minutes} : ${seconds}`;
-}
-setInterval(UpdateClock, 1000);
+// //clock
+// function UpdateClock(){
+//     const clock = document.querySelector(".clock");
+//     const now = new Date()
+//     const hours= now.getHours().toString().padStart(2,"0");
+//     // const hours= now.getHours().toString().padStart(2,"2"); to make two digit 1 lai 13
+//     const minutes= now.getMinutes().toString().padStart(2,"0");
+//     const seconds = now.getSeconds().toString().padStart(2,"0");
+//     clock.innerHTML = `${hours} : ${minutes} : ${seconds}`;
+// }
+// setInterval(UpdateClock, 1000);
+
+// // OOP(JS):         important in interview
+// function person(name, age, address){        //constructor function
+//     this.name = name;
+//     this.age = age;
+//     this.address = address;
+// } const person1 = new person("Rainbow", 3, "Satungal");  //variable
+//  const person2 = new person("Sky", 2, "Kalimati");  //variable
+//  const person3 = new person("Kittu", 5, "Kalanki");  //variable
+// console.log(person1, person2, person3);
 
 
+// OOP(JS):      very very important in interview
+function person(name, age, address){        //constructor function
+    this.name = name;
+    this.age = age;
+    this.address = address;
+    this.greeting= function(){ 
+        let greet= `Hello my name is ${this.name}. I am ${this.age} yo old. My address is ${this.address}`; //it contain white space
+        return greet;
+    }
+} const person1 = new person("Rainbow", 3, "Satungal");  //variable
+ const person2 = new person("Sky", 2, "Kalimati");  //variable
+ const person3 = new person("Kittu", 5, "Kalanki");  //variable
+console.log(person1, person2, person3);
+console.log(person1.greeting());
 
 
 
@@ -985,7 +1009,7 @@ setInterval(UpdateClock, 1000);
 // git branch branchname -- to create branch
 // git checkout branchname
 // git branch
-// now add
+// to add git 
 // git add .
 // git commit -m "abc"
 // git push origin abc"

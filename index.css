@@ -20,10 +20,18 @@
 } */
 
 .clock{
-    background-color: aqua;
+    background-color: rgb(18, 54, 54);
     text-align: center;
     margin-top: 20px;
     font-size: 30px;
+    color: aliceblue;
     font-family: serif;
+    border: 20px rgb(255, 189, 142) solid transparent;
+    border-radius: 200px;
+    height: 80px;
+    width: 200px;
+    padding: 20px;
+    padding-top: 50px;
+    margin-top: 50px;
 
 }
