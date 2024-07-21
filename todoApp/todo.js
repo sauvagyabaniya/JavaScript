@@ -58,6 +58,3 @@ form.addEventListener("submit",(e) => {
     // console.log(tasks);
 });
 
-//SetTimeOut and SetTimeInterval
-//to delay the task 1000 ->1 seconds 2000->2 seconds
-

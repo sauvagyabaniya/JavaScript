@@ -892,35 +892,93 @@
 // let result= Math.min(1,6,4,2);
 // console.log(result);
 // ---------------------to see present date and time-------------------------------------------
-// let now = new Date().getFullYear();
+// // let now = new Date().getFullYear();
+// // console.log(now);
+// let now = new Date().getMonth();
 // console.log(now);
-let now = new Date().getMonth();
-console.log(now);
 
 
-// ---------------------------GETITEM AND SETITEM-------------------------------------
-// local and server storge very important
-let input = document.getElementById("myInput");
-let btnAdd =document.getElementById("btnAdd");
-let btnRemove =document.getElementById("btnRemove");
-const myFunc =() => {
-    localStorage.setItem("key1", input.value);  //single string
-    // localStorage.setItem("key1", JSON.stringify(name:"SARBANI", age: 14 ));  
-    // setItem to store value 
-    alert(input.value);
-};
-btnAdd.addEventListener("click",myFunc);
-//wont exist in next tab it will show null coz of sessionStorage
-alert(localStorage.getItem("key1"));
-btnAdd.addEventListener("click",myFunc);
-btnRemove.addEventListener("click",() =>{
-    localStorage.removeItem("key1");  ////it will remove key 1
-    // sessionStorage.clear();     //it will remove all     
-});
-if(localStorage.getItem("key1")){
-    console.log(JSON.parse(localStorage.getItem("key1"))); 
-    // alert(localStorage.getItem,"key1 is present");
+// // ---------------------------GETITEM AND SETITEM-------------------------------------
+// // local and server storge very important
+// let input = document.getElementById("myInput");
+// let btnAdd =document.getElementById("btnAdd");
+// let btnRemove =document.getElementById("btnRemove");
+// const myFunc =() => {
+//     localStorage.setItem("key1", input.value);  //single string
+//     // localStorage.setItem("key1", JSON.stringify(name:"SARBANI", age: 14 ));  
+//     // setItem to store value 
+//     alert(input.value);
+// };
+// btnAdd.addEventListener("click",myFunc);
+// //wont exist in next tab it will show null coz of sessionStorage
+// alert(localStorage.getItem("key1"));
+// btnAdd.addEventListener("click",myFunc);
+// btnRemove.addEventListener("click",() =>{
+//     localStorage.removeItem("key1");  ////it will remove key 1
+//     // sessionStorage.clear();     //it will remove all     
+// });
+// if(localStorage.getItem("key1")){
+//     console.log(JSON.parse(localStorage.getItem("key1"))); 
+//     // alert(localStorage.getItem,"key1 is present");
+// }
+
+//SetTimeOut and SetTimeInterval
+//to delay the task 1000 ->1 seconds 2000->2 seconds
+
+// // SetTime
+// setTimeout(()=>{
+//     console.log("This is delayed by 1 second");
+//     },1000);            // 1 second delayed
+
+// setInterval(()=>{
+//     console.log("This is interval");
+//     },1000);            // 1 seconds interval    
+
+// const Intervalid = setInterval(() => {
+//     console.log("This is  1 seconds");
+//     }, 1000);   
+//              // 5 seconds interval
+// setTimeout(() => {
+//    clearInterval(Intervalid);
+//     }, 5000);            // 5 seconds interval
+
+//clock
+function UpdateClock(){
+    const clock = document.querySelector(".clock");
+    const now = new Date()
+    const hours= now.getHours().toString().padStart(2,"0");
+    // const hours= now.getHours().toString().padStart(2,"2"); to make two digit 1 lai 13
+    const minutes= now.getMinutes().toString().padStart(2,"0");
+    const seconds = now.getSeconds().toString().padStart(2,"0");
+    clock.innerHTML = `${hours} : ${minutes} : ${seconds}`;
 }
+setInterval(UpdateClock, 1000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // git branch
