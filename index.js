@@ -922,6 +922,18 @@ if(localStorage.getItem("key1")){
     // alert(localStorage.getItem,"key1 is present");
 }
 
+
+// git branch
+// git branch branchname -- to create branch
+// git checkout branchname
+// git branch
+// now add
+// git add .
+// git commit -m "abc"
+// git push origin abc"
+    //  git checkout master
+    // git merge day3
+    // git push origin master
 // to check git branch 
 // git branch
 // to create new branch
