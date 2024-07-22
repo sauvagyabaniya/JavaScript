@@ -1001,52 +1001,131 @@
 //     console.log(RainbowAccount, SkyAccount);
 
 
-//linking form html
-function BankAccount(customerName, balance=0){          //default 0
-    this.customerName = customerName;
-    this.balance = balance;
-    this.accountNumber = Date.now();
-    this.deposit = function(amount){
-        this.balance +=amount;
+// //linking form html
+// function BankAccount(customerName, balance=0){          //default 0
+//     this.customerName = customerName;
+//     this.balance = balance;
+//     this.accountNumber = Date.now();
+//     this.deposit = function(amount){
+//         this.balance +=amount;
+// }
+// this.withdraw = function(amount){
+//     this.balance -= amount;
+// };
+// }
+// const addForm = document.querySelector("#customer");
+// const customerName = document.getElementById("customerName");
+// const balance = document.querySelector("#balance");
+
+// const depositForm= document.querySelector("#depositForm");
+// const accountNumber= document.querySelector("#accountNumber");
+// const amount= document.querySelector("#amount");
+
+// const withdrawForm= document.querySelector("#withdrawForm");            //to access withdraw form
+// const withdrawAccountNumber= document.querySelector("#withdrawAccountNumber");
+// const withdrawamount= document.querySelector("#withdrawamount");
+
+// console.log(depositForm);
+// let accounts= [];
+// addForm.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     let account = new BankAccount(customerName.value, +balance.value)
+//     accounts.push(account);
+// console.log(accounts);
+// });
+// depositForm.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//    let account = accounts.find(
+//    (account) => account.accountNumber  === +accountNumber.value);
+//    account.deposit(+amount.value);
+//    console.log(accounts);
+// });
+// withdrawForm.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//      let account = accounts.find(
+//         (account) => account.accountNumber === +withdrawAccountNumber.value);
+//         account.withdraw(+amount.value) 
+//      console.log(accounts);
+// });
+
+
+// using prototype and hiding deposit
+// function BankAccount(customerName, balance=0) {
+//     this.customerName = customerName;
+//     this.balance = balance;
+//     this.accountNumber = Date.now();
+
+//     // this.deposit = function(amount) {
+//     //     this.balance += amount;
+//     // };
+// }
+// // BankAccount.prototype.add="Citizens";
+// BankAccount.prototype.add="Citizens";
+// console.log(BankAccount.prototype);         //prototype is an empty object
+// // deposit is added inside prototype so can hide the deposited amt
+
+// BankAccount.prototype.withdraw = function (amount) {
+//     this.balance -= amount;
+// };
+// BankAccount.prototype.deposit = function (amount) {
+//     this.balance += amount;
+// };
+// const RainbowAccount= new BankAccount("Rainbow", 70000000);
+// const SkyAccount= new BankAccount("Sky", 70000000);
+// RainbowAccount.deposit(9000);
+// SkyAccount.withdraw(6000);
+// console.log(RainbowAccount, SkyAccount);
+
+
+//simple way of putting deposit into prototype using class
+// class-> templete of creating obj
+class BankAccount{
+    constructor(customerName, balance=0){      // constructor holds parameters
+        this.customerName= customerName;
+        this.balance= balance;
+        this.accountNumber= Math.floor(Math.random() * 1000000000);
+    }
+    // we can directly write the method here
+    deposit(amount){
+        this.balance += amount;
+    }
+    withdraw(amount){
+        this.balance -= amount;
+    }
 }
-this.withdraw = function(amount){
-    this.balance -= amount;
-};
-}
-const addForm = document.querySelector("#customer");
-const customerName = document.getElementById("customerName");
-const balance = document.querySelector("#balance");
+const RainbowAccount= new BankAccount("Rainbow", 700);
+const SkyAccount= new BankAccount("Sky", 900);
+RainbowAccount.deposit(9000);
+SkyAccount.withdraw(60);
 
-const depositForm= document.querySelector("#depositForm");
-const accountNumber= document.querySelector("#accountNumber");
-const amount= document.querySelector("#amount");
+console.log(RainbowAccount,SkyAccount);
 
-const withdrawForm= document.querySelector("#withdrawForm");            //to access withdraw form
-const withdrawAccountNumber= document.querySelector("#withdrawAccountNumber");
-const withdrawamount= document.querySelector("#withdrawamount");
 
-console.log(depositForm);
-let accounts= [];
-addForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    let account = new BankAccount(customerName.value, +balance.value)
-    accounts.push(account);
-console.log(accounts);
-});
-depositForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-   let account = accounts.find(
-   (account) => account.accountNumber  === +accountNumber.value);
-   account.deposit(+amount.value);
-   console.log(accounts);
-});
-withdrawForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-     let account = accounts.find(
-        (account) => account.accountNumber === +withdrawAccountNumber.value);
-        account.withdraw(+amount.value) 
-     console.log(accounts);
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
