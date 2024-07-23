@@ -1077,8 +1077,30 @@
 // console.log(RainbowAccount, SkyAccount);
 
 
-//simple way of putting deposit into prototype using class
-// class-> templete of creating obj
+// //simple way of putting deposit into prototype using class
+// // class-> templete of creating obj
+// class BankAccount{
+//     constructor(customerName, balance=0){      // constructor holds parameters
+//         this.customerName= customerName;
+//         this.balance= balance;
+//         this.accountNumber= Math.floor(Math.random() * 1000000000);
+//     }
+//     // we can directly write the method here
+//     deposit(amount){
+//         this.balance += amount;
+//     }
+//     withdraw(amount){
+//         this.balance -= amount;
+//     }
+// }
+// const RainbowAccount= new BankAccount("Rainbow", 700);
+// const SkyAccount= new BankAccount("Sky", 900);
+// RainbowAccount.deposit(9000);
+// SkyAccount.withdraw(60);
+
+// console.log(RainbowAccount,SkyAccount);
+
+//repeating code to use parents and child class-inheritance
 class BankAccount{
     constructor(customerName, balance=0){      // constructor holds parameters
         this.customerName= customerName;
@@ -1093,13 +1115,38 @@ class BankAccount{
         this.balance -= amount;
     }
 }
-const RainbowAccount= new BankAccount("Rainbow", 700);
-const SkyAccount= new BankAccount("Sky", 900);
+class CurrentAccount extends BankAccount{
+    constructor(customerName, balance=0){      // constructor holds parameters
+       super(customerName,balance)
+    }   
+   // // separate 
+    // takeBusinessLoan(amount,taxRate){
+        // console.log(`your business loan is :$(amount)`)
+
+        takeBusinessLoan(amount,taxRate){
+            let ans = amount + (amount * taxRate )/100;
+            console.log(`your tax rate includes:${ans}`)
+    }
+
+}
+class SavingAccount extends BankAccount{
+    constructor(customerName, balance=0){      // constructor holds parameters
+       super(customerName,balance)
+    }   
+        takePersonalLoan(amount,taxRate){
+            let ans = amount + (amount * taxRate)/100;
+            console.log(`your tax rate includes :${ans}`)
+    }
+}
+// const RainbowAccount= new CurrentAccount("Rainbow", 700);
+const RainbowAccount= new CurrentAccount("Rainbow", 700);
+// const SkyAccount= new BusinessAccount("Sky", 900);
+const SkyAccount= new SavingAccount("Sky", 900);
 RainbowAccount.deposit(9000);
 SkyAccount.withdraw(60);
-
+// SkyAccount.takeBusinessLoan(60000);
+SkyAccount.takePersonalLoan(6000, 20);
 console.log(RainbowAccount,SkyAccount);
-
 
 
 
