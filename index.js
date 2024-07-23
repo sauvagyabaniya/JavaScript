@@ -1101,60 +1101,93 @@
 // console.log(RainbowAccount,SkyAccount);
 
 //repeating code to use parents and child class-inheritance
-class BankAccount{
-    constructor(customerName, balance=0){      // constructor holds parameters
-        this.customerName= customerName;
-        this.balance= balance;
-        this.accountNumber= Math.floor(Math.random() * 1000000000);
-    }
-    // we can directly write the method here
-    deposit(amount){
-        this.balance += amount;
-    }
-    withdraw(amount){
-        this.balance -= amount;
-    }
-}
-class CurrentAccount extends BankAccount{
-    constructor(customerName, balance=0){      // constructor holds parameters
-       super(customerName,balance)
-    }   
-   // // separate 
-    // takeBusinessLoan(amount,taxRate){
-        // console.log(`your business loan is :$(amount)`)
+// class BankAccount{
+//     constructor(customerName, balance=0){      // constructor holds parameters
+//         this.customerName= customerName;
+//         this.balance= balance;
+//         this.accountNumber= Math.floor(Math.random() * 1000000000);
+//     }
+//     // we can directly write the method here
+//     deposit(amount){
+//         this.balance += amount;
+//     }
+//     withdraw(amount){
+//         this.balance -= amount;
+//     }
+// }
+// class CurrentAccount extends BankAccount{
+//     constructor(customerName, balance=0){      // constructor holds parameters
+//        super(customerName,balance)
+//     }   
+//    // // separate 
+//     // takeBusinessLoan(amount,taxRate){
+//         // console.log(`your business loan is :$(amount)`)
 
-        takeBusinessLoan(amount,taxRate){
-            let ans = amount + (amount * taxRate )/100;
-            console.log(`your tax rate includes:${ans}`)
-    }
+//         takeBusinessLoan(amount,taxRate){
+//             let ans = amount + (amount * taxRate )/100;
+//             console.log(`your tax rate includes:${ans}`)
+//     }
 
-}
-class SavingAccount extends BankAccount{
-    constructor(customerName, balance=0){      // constructor holds parameters
-       super(customerName,balance)
-    }   
-        takePersonalLoan(amount,taxRate){
-            let ans = amount + (amount * taxRate)/100;
-            console.log(`your tax rate includes :${ans}`)
-    }
-}
+// }
+// class SavingAccount extends BankAccount{
+//     constructor(customerName, balance=0){      // constructor holds parameters
+//        super(customerName,balance)
+//     }   
+//         takePersonalLoan(amount,taxRate){
+//             let ans = amount + (amount * taxRate)/100;
+//             console.log(`your tax rate includes :${ans}`)
+//     }
+// }
+// // const RainbowAccount= new CurrentAccount("Rainbow", 700);
 // const RainbowAccount= new CurrentAccount("Rainbow", 700);
-const RainbowAccount= new CurrentAccount("Rainbow", 700);
-// const SkyAccount= new BusinessAccount("Sky", 900);
-const SkyAccount= new SavingAccount("Sky", 900);
-RainbowAccount.deposit(9000);
-SkyAccount.withdraw(60);
-// SkyAccount.takeBusinessLoan(60000);
-SkyAccount.takePersonalLoan(6000, 20);
-console.log(RainbowAccount,SkyAccount);
+// // const SkyAccount= new BusinessAccount("Sky", 900);
+// const SkyAccount= new SavingAccount("Sky", 900);
+// RainbowAccount.deposit(9000);
+// SkyAccount.withdraw(60);
+// // SkyAccount.takeBusinessLoan(60000);
+// SkyAccount.takePersonalLoan(6000, 20);
+// console.log(RainbowAccount,SkyAccount);
 
 
+// ---------------Encaptulation Methods --------------------------------
+//making private so that other cannot access using #
+// class BankAccount {
+//     customerName;
+//     // using # to make balance private
+//     #balance=0;
+//     accountNumber;
+//     constructor(customerName, balance=0){      // constructor holds parameters
+//         this.customerName= customerName;
+//         this.#balance= balance;
+//         this.accountNumber= Date.now();
+//     }
+//     deposit(amount){
+//     this.#balance += amount;
+// }
+//     withdraw(amount){
+//     this.#balance -= amount;
+// }
+// getBalance(){
+//     return this.#balance;
+// }
+// //making public methos to access leoaccount
+// setBalance(amount){
+//     this.#balance = amount;
+// }
+// }
+// const FedrikAccount = new BankAccount("Fedrik",500);
+// const LeoAccount = new BankAccount("Leo",50);
+// LeoAccount.setBalance(900);
+// console.log(LeoAccount.getBalance());
+// console.log(FedrikAccount,LeoAccount);
 
-
-
-
-
-
+// -----------------------------Static Property and Mehtod--------------------------
+// ----instance is known as obj so no need to make obj-----
+class Configure{
+    static username="Rainbow ";
+    static email="rain@gmail.com";
+}
+console.log(Configure.email);
 
 
 
