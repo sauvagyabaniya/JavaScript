@@ -1,0 +1,25 @@
+{
+    "person":
+    {
+        "name":"John",
+        "age":30,
+        "address":"Ktm"
+
+    }, 
+    "products":[
+    {
+        "id":1,
+        "productName": "Drools",
+        "price":5000,
+        "inStock":"true"
+    },
+    
+    {  
+        
+        "id":1,
+        "productName": "Pedigree",
+        "price":3000,
+        "inStock":"true"
+    }    
+]
+}
