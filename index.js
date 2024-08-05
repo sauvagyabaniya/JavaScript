@@ -1243,28 +1243,28 @@
 // fetchedData();
 
 
-//fetch data and this asyn is written same but in diff and readable way 
-// in json if data is inside [] then it is called array na dif {} its obj
-// this is called API integration
-// // async,call abcak and promise are all asyncronous is used to make asynchronous
-const fetchedData = async()=>{ try { 
-    // await is used to stop the data while its taking time to response
-    const res = await fetch("https://catfact.ninja/facts");
-    // const res = await fetch("https://catfact.ninja/fact");   to make it defined in array we have to write catch (error){console.log(error);}
-    // undefined if we write facts at last inside link
-    const data =await res.json();
-    const facts = data.data
-    facts.forEach((value, index) => {
-        const h1 = document.createElement("h1")
-        h1.innerText = value.fact;
-        document.body.append(h1);
-    });
- console.log(facts); 
- }catch (error){
-        console.log(error);
-}
-}
-fetchedData();
+// //fetch data and this asyn is written same but in diff and readable way 
+// // in json if data is inside [] then it is called array na dif {} its obj
+// // this is called API integration
+// // // async,call abcak and promise are all asyncronous is used to make asynchronous
+// const fetchedData = async()=>{ try { 
+//     // await is used to stop the data while its taking time to response
+//     const res = await fetch("https://catfact.ninja/facts");
+//     // const res = await fetch("https://catfact.ninja/fact");   to make it defined in array we have to write catch (error){console.log(error);}
+//     // undefined if we write facts at last inside link
+//     const data =await res.json();
+//     const facts = data.data
+//     facts.forEach((value, index) => {
+//         const h1 = document.createElement("h1")
+//         h1.innerText = value.fact;
+//         document.body.append(h1);
+//     });
+//  console.log(facts); 
+//  }catch (error){
+//         console.log(error);
+// }
+// }
+// fetchedData();
 
 
 
@@ -1300,7 +1300,8 @@ fetchedData();
 // // to add git 
 // // git add .
 // // git commit -m "abc"
-// // git push origin abc"
+// for default git we can do git push only
+// // git push origin gitname"
 //     //  git checkout master
 //     // git merge day3
 //     // git push origin master
